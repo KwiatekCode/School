@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SystemLosowaniaUcznia.MainPage"
+             Title="Lista Uczniow">
+
+    <ContentPage.Resources>
+
+        <StyleSheet Source="/Resources/Styles/Styles.css" />
+
+    </ContentPage.Resources>
+    
+    <Grid ColumnDefinitions="*, 3*, *">
+        <Border Grid.Column="0">
+
+                <ListView ItemsSource="{Binding StudentListHandler.ClassList}" ItemSelected="ListView_Class_Selected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <Grid>
+                                    <Label Text="{Binding .}"/>
+                                </Grid>
+
+                            </ViewCell>
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+        </Border>
+
+        <Border Grid.Column="1">
+
+            <Grid RowDefinitions="20*, *, *">
+
+                <ScrollView Grid.Row="0">
+
+                    <ListView ItemsSource="{Binding StudentListHandler.SelectedClassStudents}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                <Grid ColumnDefinitions="*, *, *, *, *">
+                                    <Label Text="{Binding Number}" Grid.Column="1"/>
+                                    <Label Text="{Binding FirstName}" Grid.Column="2"/>
+                                    <Label Text="{Binding LastName}" Grid.Column="3"/>
+                            
+                                </Grid>
+
+                            </ViewCell>
+                               
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </ScrollView>
+
+                <Label x:Name="errorLabel" Text="" Grid.Row="1"/>
+
+                <Grid Grid.Row="2" ColumnDefinitions="*, *, *, *">
+
+                    <Editor x:Name="FirstNameEditor" Placeholder="Wpisz Imie" Grid.Column="0"/>
+                    <Editor x:Name="LastNameEditor" Placeholder="Wpisz Nazwisko" Grid.Column="1"/>
+                    <Editor x:Name="NumberEditor" Placeholder="Wpisz Numerek" Grid.Column="2"/>
+                    <Button Clicked="Button_Add_User" Text="Dodaj" Grid.Column="3" StyleClass="Button_Dodaj_Ucznia"/>
+
+                </Grid>
+
+            </Grid>
+
+        </Border>
+
+        <Border Grid.Column="2">
+
+            <VerticalStackLayout>
+
+                <Grid RowDefinitions="*, *, *, *">
+
+                    <Button Text="Wylosuj" Clicked="Draw_Student" StyleClass="Button_Wylosuj" Grid.Row="1"/>
+
+                    <Label Text="" x:Name="DrawedStudent" Grid.Row="2"/>
+
+                </Grid>
+            </VerticalStackLayout>
+
+        </Border>
+
+    </Grid>
+
+</ContentPage>
+

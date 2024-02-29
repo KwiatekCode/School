@@ -1,0 +1,35 @@
+﻿^contentpage {
+    -maui-shell-title: white;
+    -maui-shell-background: #9400D3;
+}
+.Button_Wylosuj {
+    color: white;
+    font-style: bold;
+    background: #9400D3;
+    font-size: 20;
+}
+grid > label{
+    color: white;
+    font-size: 22;
+    font-style: bold;
+    text-align: center;
+}
+#errorLabel {
+    color: red;
+    font-style: bold;
+    text-align: center;
+}
+
+.Button_Dodaj_Ucznia{
+    font-size: 20;
+    font-style: bold;
+    background: Green;
+    color: white;
+}
+
+#DrawedStudent{
+    text-align: center;
+    font-size: 18;
+    font-style: bold;
+    color: white;
+}

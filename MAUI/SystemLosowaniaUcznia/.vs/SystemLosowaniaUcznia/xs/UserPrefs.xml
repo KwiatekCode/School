@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{24A1292F-88E5-418B-8D3B-099680BD27CC}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SystemLosowaniaUcznia/Resources/Styles/Styles.xaml">
+    <Files>
+      <File FileName="SystemLosowaniaUcznia/MainPage.xaml.cs" />
+      <File FileName="SystemLosowaniaUcznia/MainPage.xaml" />
+      <File FileName="SystemLosowaniaUcznia/Models/Student.cs" />
+      <File FileName="SystemLosowaniaUcznia/Models/FileDataHandler.cs" />
+      <File FileName="SystemLosowaniaUcznia/Models/ListHandler.cs" />
+      <File FileName="SystemLosowaniaUcznia/Resources/Styles/Colors.xaml" />
+      <File FileName="SystemLosowaniaUcznia/Resources/Styles/Styles.xaml" Line="1" Column="1" />
+      <File FileName="SystemLosowaniaUcznia/App.xaml" />
+      <File FileName="SystemLosowaniaUcznia/Resources/Styles/Styles.css" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.313/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="266" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SystemLosowaniaUcznia" expanded="True">
+            <Node name="SystemLosowaniaUcznia" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="Styles" expanded="True">
+                  <Node name="Styles.xaml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SystemLosowaniaUcznia PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
