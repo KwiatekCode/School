@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieUcznia.MainPage"
+             Title="Lista Uczniow">
+
+    <ContentPage.Resources>
+
+        <StyleSheet Source="/Resources/Styles/Styles.css" />
+
+    </ContentPage.Resources>
+
+    <Grid ColumnDefinitions="*, 10*, 3*">
+            <Grid Grid.Column="0" RowDefinitions="20*, 2*" StyleClass="Grid_First_Style">
+                <ScrollView Grid.Row="0">
+                    <ListView ItemsSource="{Binding StudentListHandler.ClassList}" ItemSelected="ListView_Class_Selected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <Grid>
+
+                                        <Label Text="{Binding .}" StyleClass="Class_Style"/>
+
+                                    </Grid>
+
+                                </ViewCell>
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </ScrollView>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Grid RowDefinitions="20*, *, *">
+
+                    <ScrollView Grid.Row="0">
+
+                        <ListView ItemsSource="{Binding StudentListHandler.SelectedClassStudents}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+
+                                    <Grid ColumnDefinitions="*, *, *, *, *">
+                                        <Label Text="{Binding Number}" Grid.Column="1" StyleClass="Student_Style"/>
+                                        <Label Text="{Binding FirstName}" Grid.Column="2" StyleClass="Student_Style"/>
+                                        <Label Text="{Binding LastName}" Grid.Column="3" StyleClass="Student_Style"/>
+                            
+                                    </Grid>
+
+                                </ViewCell>
+                               
+                                </DataTemplate>
+
+                            </ListView.ItemTemplate>
+
+                        </ListView>
+
+                    </ScrollView>
+
+                    <Label x:Name="errorLabel" Text="" Grid.Row="1"/>
+
+                    <Grid Grid.Row="2" ColumnDefinitions="*, *, *, *, *">
+
+                        <Editor x:Name="FirstNameEditor" Placeholder="Wpisz Imie" Grid.Column="0"/>
+                        <Editor x:Name="LastNameEditor" Placeholder="Wpisz Nazwisko" Grid.Column="1"/>
+                        <Editor x:Name="ClassEditor" Placeholder="Wpisz Klase" Grid.Column="2"/>
+                        <Editor x:Name="NumberEditor" Placeholder="Wpisz Numerek" Grid.Column="3"/>
+                        <Button Clicked="Button_Add_User" Text="Dodaj" Grid.Column="4" StyleClass="Button_Add_User_Style"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Column="2" >
+
+                <Grid RowDefinitions="5*, *, *, 5*" StyleClass="Draw_Grid_Style">
+
+                    <Button Text="Wylosuj" Clicked="Draw_Student" StyleClass="Draw_Student_Button_Style" Grid.Row="1"/>
+
+                    <Label Text="" x:Name="DrawedStudent" Grid.Row="2"/>
+
+                </Grid>
+                
+
+            </Grid>
+
+        </Grid>
+
+</ContentPage>
