@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{49018B8E-6D88-42BD-8195-26E34F4FBA16}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CollectionManagementSystem PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionManagementSystem/Views/CollectionDetailsPage.xaml">
+    <Files>
+      <File FileName="CollectionManagementSystem/Views/MainPage.xaml" />
+      <File FileName="CollectionManagementSystem/Views/MainPage.xaml.cs" Line="13" Column="1" />
+      <File FileName="CollectionManagementSystem/Views/CollectionDetailsPage.xaml" Line="6" Column="29" />
+      <File FileName="CollectionManagementSystem/Views/CollectionDetailsPage.xaml.cs" />
+      <File FileName="CollectionManagementSystem/Services/FileDataHandler.cs" />
+      <File FileName="CollectionManagementSystem/AppShell.xaml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CollectionManagementSystem" expanded="True">
+            <Node name="CollectionManagementSystem" expanded="True">
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="CollectionDetailsPage.xaml" expanded="True" selected="True" />
+                <Node name="MainPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

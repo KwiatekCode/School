@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionManagementSystem.Views.CollectionDetailsPage"
+             x:Name="ContentPageName">
+    <Grid RowDefinitions="19*, *">
+
+        <Grid Grid.Row="0">
+            <ScrollView>
+
+                <CollectionView x:Name="ItemView" SelectionMode="Single" SelectionChanged="CollectionView_SelectionChanged">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+
+                            
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding }"/>
+                                 <Button Clicked="EditItem" Text="Edytuj" IsVisible="true" />
+                                 <Button Clicked="DeleteItem" Text="Usuń" IsVisible="true" />
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </ScrollView>
+         </Grid>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*">
+
+            <Editor x:Name="ItemName" Placeholder="Wpisz Nazwę" Grid.Column="0"/>
+
+            <Button Clicked="AddNewItem" Text="Dodaj" Grid.Column="1"/>
+
+        </Grid>
+    </Grid>
+    
+</ContentPage>
